@@ -1,0 +1,34 @@
+Update the code by implementing the following rules
+if an exception is thrown by s.execute() then c.rollback()...
+
+public class A {
+
+	/**
+	 * Execute the service with the given connection
+	 */
+	void a(Service s, Connection c) throws Exception {
+		// update this code
+		s.setConnection(c);
+		try {
+			s.execute();
+			c.commit();
+		} catch (Exception e) {
+			c.rollback();
+			throw e;
+		} finally {
+			c.close();
+		}
+	}
+	
+	interface Service {
+		void execute() throws Exception;
+		void setConnection(Connection c);
+	}
+	
+	interface Connection {
+		void commit();
+		void rollback();
+		void close();
+		
+	}
+}
