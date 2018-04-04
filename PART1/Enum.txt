@@ -4,3 +4,5 @@ enum PLanet {
 
 1 - Planet.MERCURY == Planet.MERCURY is true
 3 - Planet.MERCURY.equals(Planet.MERCURY) is true
+
+
