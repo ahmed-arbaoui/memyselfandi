@@ -1,0 +1,6 @@
+Which exception(s) belong to j2SE API
+
+Réponse:
+
+1 - ArrayIndexOutOfBoundsException
+3 - NullPointerException
